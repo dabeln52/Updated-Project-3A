@@ -1,0 +1,4 @@
+flask
+pygal
+requests
+alpha-vantage
