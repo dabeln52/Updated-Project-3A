@@ -102,6 +102,6 @@ def chart():
 
     chart = chart.render_data_uri()
 
-    return render_template('secondPage.html', symbol = symbol, chart_type = chart_type, time_series = time_series, start_date = start_date, end_date = end_date, chart = chart)
+    return render_template('chart.html', symbol = symbol, chart_type = chart_type, time_series = time_series, start_date = start_date, end_date = end_date, chart = chart)
 
 app.run()

@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Stock Chart</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
     <h1>Stock Chart</h1>
-    {{ chart|safe }} <!--This allows the html to render an image over text-->
-  </body>
+    <p>Symbol: {{symbol}}</p>
+    <p>Chart Type: {{chart_type}}</p>
+    <p>Time Series: {{time_series}}</p>
+    <p>Start Date: {{start_date}}</p>
+    <p>End Date: {{end_date}}</p>
+
+    <div id="chart">
+        <embed src={{ chart | safe }} type="image/svg+xml">
+    </div>
+
+</body>
 </html>
